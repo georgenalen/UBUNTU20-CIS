@@ -32,6 +32,7 @@
   when:
       - ubtu20cis_rule_3_1_1
       - not ubtu20cis_ipv6_required
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -61,6 +62,7 @@
         when: ubtu20cis_3_1_2_network_manager_status.stdout | length == 0
   when:
       - ubtu20cis_rule_3_1_2
+      - not system_is_container
   tags:
       - level1-server
       - level2-workstation

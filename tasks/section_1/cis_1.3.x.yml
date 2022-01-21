@@ -5,6 +5,7 @@
       state: present
   when:
       - ubtu20cis_rule_1_3_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -26,6 +27,7 @@
       job: "{{ ubtu20cis_aide_cron['aide_job'] }}"
   when:
       - ubtu20cis_rule_1_3_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

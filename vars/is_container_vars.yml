@@ -1,0 +1,12 @@
+---
+
+# File to skip controls if host is a container
+# Based on standard image with no changes
+# Expectation is all packages required for container are already installed
+
+## Controls
+
+# Authconfig
+
+# Firewall
+ubtu20cis_firewall_package: none

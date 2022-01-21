@@ -5,6 +5,7 @@
       state: present
   when:
       - ubtu20cis_rule_2_1_1_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -44,6 +45,7 @@
   when:
       - ubtu20cis_rule_2_1_1_2
       - ubtu20cis_time_sync_tool == "systemd-timesyncd"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -97,6 +99,7 @@
   when:
       - ubtu20cis_rule_2_1_1_3
       - ubtu20cis_time_sync_tool == "chrony"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -145,6 +148,7 @@
   when:
       - ubtu20cis_rule_2_1_1_4
       - ubtu20cis_time_sync_tool == "ntp"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -160,6 +164,7 @@
   when:
       - ubtu20cis_rule_2_1_2
       - not ubtu20cis_desktop_required
+      # - not system_is_container
   tags:
       - level1-server
       - automated

@@ -7,6 +7,7 @@
       - ubtu20cis_rule_1_8_1
       - not ubtu20cis_desktop_required
       - ubtu20cis_disruption_high
+      - not system_is_container
   tags:
       - level2-server
       - manual
@@ -32,6 +33,7 @@
   when:
       - ubtu20cis_rule_1_8_2
       - ubtu20cis_desktop_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -54,6 +56,7 @@
   when:
       - ubtu20cis_rule_1_8_3
       - ubtu20cis_desktop_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -69,6 +72,7 @@
       state: absent
   when:
       - ubtu20cis_rule_1_8_4
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

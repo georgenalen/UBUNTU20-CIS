@@ -47,6 +47,7 @@
         notify: grub update
   when:
       - ubtu20cis_rule_1_6_1_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

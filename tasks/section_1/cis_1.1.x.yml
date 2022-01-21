@@ -15,6 +15,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -39,6 +40,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -63,6 +65,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_3
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -87,6 +90,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_4
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -111,6 +115,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_5
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -135,6 +140,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_6
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -159,6 +165,7 @@
         when: ansible_connection != 'docker'
   when:
       - ubtu20cis_rule_1_1_1_7
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -176,6 +183,7 @@
       opts: "{{ ubtu20cis_tmp_fstab_options }}"
   when:
       - ubtu20cis_rule_1_1_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -199,6 +207,7 @@
         ubtu20cis_rule_1_1_4 or
         ubtu20cis_rule_1_1_5
       # - ubtu20cis_vartmp['enabled']
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -218,6 +227,7 @@
       opts: "{{ ubtu20cis_dev_shm_fstab_options }}"
   when:
       - ubtu20cis_rule_1_1_6
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -240,6 +250,7 @@
       - ubtu20cis_rule_1_1_7 or
         ubtu20cis_rule_1_1_8 or
         ubtu20cis_rule_1_1_9
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -269,6 +280,7 @@
         when: ubtu20cis_1_1_10_var_mounted.stdout | length == 0
   when:
       - ubtu20cis_rule_1_1_10
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -296,6 +308,7 @@
         when: ubtu20cis_1_1_11_var_tmp_mounted.stdout | length == 0
   when:
       - ubtu20cis_rule_1_1_11
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -319,6 +332,7 @@
         ubtu20cis_rule_1_1_13 or
         ubtu20cis_rule_1_1_14
       - ubtu20cis_vartmp['enabled']
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -348,6 +362,7 @@
         when: ubtu20cis_1_1_15_var_log_mounted.stdout | length == 0
   when:
       - ubtu20cis_rule_1_1_15
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -375,6 +390,7 @@
         when: ubtu20cis_1_1_16_var_log_audit_mounted.stdout | length == 0
   when:
       - ubtu20cis_rule_1_1_16
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -401,6 +417,7 @@
         when: ubtu20cis_1_1_17_home_mounted.stdout | length == 0
   when:
       - ubtu20cis_rule_1_1_17
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -419,6 +436,7 @@
   when:
       - ubtu20cis_rule_1_1_18
       - item.mount == "/home"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -515,6 +533,7 @@
   when:
       - ubtu20cis_rule_1_1_24
       - not ubtu20cis_allow_usb_storage
+      - not system_is_container
   tags:
       - level1-server
       - level2-workstation

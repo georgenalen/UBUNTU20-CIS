@@ -5,6 +5,7 @@
       state: present
   when:
       - ubtu20cis_rule_4_2_1_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -20,6 +21,7 @@
       enabled: yes
   when:
       - ubtu20cis_rule_4_2_1_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -78,6 +80,7 @@
         when: ubtu20cis_rsyslog_ansible_managed
   when:
       - ubtu20cis_rule_4_2_1_3
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -94,6 +97,7 @@
   notify: restart rsyslog
   when:
       - ubtu20cis_rule_4_2_1_4
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -111,6 +115,7 @@
       insertafter: EOF
   when:
       - ubtu20cis_rule_4_2_1_5
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -144,6 +149,7 @@
         when: ubtu20cis_system_is_log_server
   when:
       - ubtu20cis_rule_4_2_1_6
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

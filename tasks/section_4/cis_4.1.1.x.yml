@@ -5,6 +5,7 @@
       state: present
   when:
       - ubtu20cis_rule_4_1_1_1
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -20,6 +21,7 @@
       enabled: yes
   when:
       - ubtu20cis_rule_4_1_1_2
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -56,6 +58,7 @@
         when: "'audit=' in ubtu20cis_4_1_1_3_cmdline_settings.stdout"
   when:
       - ubtu20cis_rule_4_1_1_3
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -91,6 +94,7 @@
         notify: grub update
   when:
       - ubtu20cis_rule_4_1_1_4
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation

@@ -6,6 +6,7 @@
   when:
       - ubtu20cis_rule_3_5_1_1
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -22,6 +23,7 @@
   when:
       - ubtu20cis_rule_3_5_1_2
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -39,6 +41,7 @@
   when:
       - ubtu20cis_rule_3_5_2_1
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -80,6 +83,7 @@
   when:
       - ubtu20cis_rule_3_5_1_4
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -109,6 +113,7 @@
   when:
       - ubtu20cis_rule_3_5_1_5
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -145,6 +150,7 @@
   when:
       - ubtu20cis_rule_3_5_1_6
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -165,6 +171,7 @@
   when:
       - ubtu20cis_rule_3_5_1_7
       - ubtu20cis_firewall_package == "ufw"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -187,6 +194,7 @@
   when:
       - ubtu20cis_rule_3_5_2_1
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -204,6 +212,7 @@
   when:
       - ubtu20cis_rule_3_5_2_2
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -220,6 +229,7 @@
   when:
       - ubtu20cis_rule_3_5_2_3
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -239,6 +249,7 @@
   when:
       - ubtu20cis_rule_3_5_2_4
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -271,6 +282,7 @@
   when:
       - ubtu20cis_rule_3_5_2_5
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -331,6 +343,7 @@
   when:
       - ubtu20cis_rule_3_5_2_6
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -345,6 +358,7 @@
   when:
       - ubtu20cis_rule_3_5_2_7
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -359,6 +373,7 @@
   when:
       - ubtu20cis_rule_3_5_2_8
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -377,6 +392,7 @@
   when:
       - ubtu20cis_rule_3_5_2_8
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -391,6 +407,7 @@
   when:
       - ubtu20cis_rule_3_5_2_10
       - ubtu20cis_firewall_package == "nftables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -406,6 +423,7 @@
   when:
       - ubtu20cis_rule_3_5_3_1_1
       - ubtu20cis_firewall_package == "iptables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -421,6 +439,7 @@
   when:
       - ubtu20cis_rule_3_5_3_1_2
       - ubtu20cis_firewall_package == "iptables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -436,6 +455,7 @@
   when:
       - ubtu20cis_rule_3_5_3_1_3
       - ubtu20cis_firewall_package == "iptables"
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -470,6 +490,7 @@
       - ubtu20cis_rule_3_5_3_2_1
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -497,6 +518,7 @@
       - ubtu20cis_rule_3_5_3_2_2
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -542,6 +564,7 @@
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv4_required
       - not system_is_ec2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -580,6 +603,7 @@
       - ubtu20cis_rule_3_5_3_2_4
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -614,6 +638,7 @@
         ubtu20cis_rule_3_5_3_2_2 or
         ubtu20cis_rule_3_5_3_2_3 or
         ubtu20cis_rule_3_5_3_2_4
+      - not system_is_container
 
 - name: "AUTOMATED | 3.5.3.3.1 | PATCH | Ensure ip6tables loopback traffic is configured"
   block:
@@ -645,6 +670,7 @@
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv6_required
       - not ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -674,6 +700,7 @@
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv6_required
       - not ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -714,6 +741,7 @@
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv6_required
       - not ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -752,6 +780,7 @@
       - ubtu20cis_firewall_package == "iptables"
       - ubtu20cis_ipv6_required
       - not ubtu20cis_ipv4_required
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -788,3 +817,4 @@
         ubtu20cis_rule_3_5_3_3_2 or
         ubtu20cis_rule_3_5_3_3_3 or
         ubtu20cis_rule_3_5_3_3_4
+      - not system_is_container

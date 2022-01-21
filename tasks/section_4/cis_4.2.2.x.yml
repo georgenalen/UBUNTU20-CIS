@@ -7,6 +7,7 @@
       insertafter: '\[Journal\]'
   when:
       - ubtu20cis_rule_4_2_2_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -24,6 +25,7 @@
       insertafter: '\[Journal\]'
   when:
       - ubtu20cis_rule_4_2_2_2
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -40,6 +42,7 @@
       insertafter: '\[Journal\]'
   when:
       - ubtu20cis_rule_4_2_2_3
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

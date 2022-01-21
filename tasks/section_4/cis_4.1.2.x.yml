@@ -8,6 +8,7 @@
   notify: restart auditd
   when:
       - ubtu20cis_rule_4_1_2_1
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -24,6 +25,7 @@
   notify: restart auditd
   when:
       - ubtu20cis_rule_4_1_2_2
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation
@@ -44,6 +46,7 @@
   notify: restart auditd
   when:
       - ubtu20cis_rule_4_1_2_3
+      - not system_is_container
   tags:
       - level2-server
       - level2-workstation

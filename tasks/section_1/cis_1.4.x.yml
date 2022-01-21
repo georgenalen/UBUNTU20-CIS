@@ -14,6 +14,7 @@
             line: if [ "x${grub_cfg}" != "x" ]; then
   when:
       - ubtu20cis_rule_1_4_1
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -63,6 +64,7 @@
             - ubtu20cis_1_4_3_grub_cfg_status.stat.exists
   when:
       - ubtu20cis_rule_1_4_3
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation
@@ -77,6 +79,7 @@
       password: "{{ ubtu20cis_root_pw }}"
   when:
       - ubtu20cis_rule_1_4_4
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

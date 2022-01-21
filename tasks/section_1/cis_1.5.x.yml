@@ -113,6 +113,7 @@
         when: "'systemd-coredump' in ansible_facts.packages"
   when:
       - ubtu20cis_rule_1_5_4
+      - not system_is_container
   tags:
       - level1-server
       - level1-workstation

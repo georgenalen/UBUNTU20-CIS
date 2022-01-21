@@ -69,7 +69,7 @@ ubtu20cis_workaround_for_ssg_benchmark: true
 ubtu20cis_system_is_chroot: "{{ ansible_is_chroot | default(False) }}"
 
 # tweak role to run in a non-privileged container
-ubtu20cis_system_is_container: false
+system_is_container: false
 
 # skip events for ec2 instance testing pipeline
 system_is_ec2: false
