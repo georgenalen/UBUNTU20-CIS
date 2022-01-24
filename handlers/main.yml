@@ -51,7 +51,7 @@
 
 - name: restart sshd
   service:
-      name: sshd
+      name: "{{ (system_is_container) | ternary('ssh','sshd') }}"
       state: restarted
 
 - name: reload gdm
