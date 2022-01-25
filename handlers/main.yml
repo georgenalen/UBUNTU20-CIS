@@ -53,6 +53,7 @@
   service:
       name: "{{ (system_is_container) | ternary('ssh','sshd') }}"
       state: restarted
+  when: "'openssh-server' in ansible_facts.packages"
 
 - name: reload gdm
   command: dpkg-reconfigure gdm3
