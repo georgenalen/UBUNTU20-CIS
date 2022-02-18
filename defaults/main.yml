@@ -17,6 +17,7 @@ ubtu20cis_section6_patch: true
 ubtu20_skip_reboot: True
 # test yo
 # test
+# test it again yo
 
 ## Benchmark name used by auditing control role
 # The audit variable found at the base
