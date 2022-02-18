@@ -1,5 +1,5 @@
-// vars should be loaded by OSname.tfvars
-aws_region    = "us-west-1"
+t// vars should be loaded by OSname.tfvars
+aws_region    = "us-east-1"
 instance_type = "t3.micro"
 ami_id        = var.ami_id
 ami_os        = var.ami_os
