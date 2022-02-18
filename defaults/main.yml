@@ -6,6 +6,7 @@ ubtu20cis_oscap_scan: no
 ubtu20cis_report_dir: /tmp
 
 # toggle each section
+# Set to true will run the section and set to false will skip the entire section
 ubtu20cis_section1_patch: true
 ubtu20cis_section2_patch: true
 ubtu20cis_section3_patch: true
