@@ -103,6 +103,7 @@ jobs:
           inventory: .github/workflows/hosts.yml
           galaxy_file: collections/requirements.yml
           private_key: ${{ secrets.SSH_PRV_KEY }}
+          skip_tags: rule_1.1.1.6
 #          verbose: 3
         env:
           ANSIBLE_HOST_KEY_CHECKING: "false"
