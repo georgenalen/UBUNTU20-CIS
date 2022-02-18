@@ -6,6 +6,7 @@ ubtu20cis_oscap_scan: no
 ubtu20cis_report_dir: /tmp
 
 # toggle each section
+# test2
 ubtu20cis_section1_patch: true
 ubtu20cis_section2_patch: true
 ubtu20cis_section3_patch: true
